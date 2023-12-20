@@ -1,0 +1,16 @@
+.btn {
+  color: rgba(255, 171, 16, 0.864);
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.btn:hover {
+  color: rgb(251, 145, 15);
+  cursor: pointer;
+}
+.active {
+  border-bottom: 2px solid white;
+  color: rgb(251, 145, 15);
+  background-color: transparent;
+}

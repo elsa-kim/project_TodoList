@@ -1,0 +1,22 @@
+.add_containter {
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+}
+.input {
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+  flex: 1 0 auto;
+}
+.add {
+  border: none;
+  background-color: rgb(251, 145, 15);
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1.1rem;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+}
