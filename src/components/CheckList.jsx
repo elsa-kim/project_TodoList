@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import s from "./CheckList.module.css";
 import { BsTrash3Fill } from "react-icons/bs";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function CheckList({ darkmode, item, deleteItem, idx, setItemList, itemList }) {
   const [checked, setChecked] = useState();
+  //   const [checked, setChecked] = useLocalStorage("checked", item.checked);
+
   let changeCheckArray = itemList;
   return (
     <div className={s.list}>
@@ -15,9 +18,9 @@ export default function CheckList({ darkmode, item, deleteItem, idx, setItemList
           setItemList(changeCheckArray);
           setChecked(item.checked);
         }}
-        checked={checked}
+        checked={item.checked}
       />
-      <p className={checked ? s.check_item : s.item} style={darkmode ? { color: "white" } : { color: "black" }}>
+      <p className={item.checked ? s.check_item : s.item} style={darkmode ? { color: "white" } : { color: "black" }}>
         {item.todo}
       </p>
       <BsTrash3Fill

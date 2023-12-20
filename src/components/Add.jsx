@@ -1,8 +1,9 @@
+import useLocalStorage from "../hooks/useLocalStorage";
 import s from "./Add.module.css";
 import React, { useState } from "react";
 
 export default function Add({ darkmode, setItemList }) {
-  const [inputItem, setInputItem] = useState("");
+  const [inputItem, setInputItem] = useLocalStorage("inputItem", "");
   const handleAdd = (e) => {
     setInputItem(e.target.value);
   };

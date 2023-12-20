@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar";
 import List from "./components/List";
 import { useState } from "react";
 import Add from "./components/Add";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 export default function App() {
-  const [darkmode, setDarkmode] = useState(false);
-  const [itemList, setItemList] = useState([
+  // const [darkmode, setDarkmode] = useState(false);
+  const [darkmode, setDarkmode] = useLocalStorage("darkmode", false);
+  const [itemList, setItemList] = useLocalStorage("itemList", [
     { todo: "청소하기", checked: false },
     { todo: "밥먹기", checked: false },
   ]);
